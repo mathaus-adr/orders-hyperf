@@ -7,7 +7,6 @@ services:
       context: .
     volumes:
       - ./:/opt/www
-      - ../orders-domain:/opt/www/orders-domain
     ports:
       - 9501:9501
     environment:
