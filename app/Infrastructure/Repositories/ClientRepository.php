@@ -3,6 +3,7 @@
 namespace App\Infrastructure\Repositories;
 
 use App\Model\Client as ClientHyperfModel;
+use Hyperf\DbConnection\Db;
 use Orders\Domain\Entities\Client;
 
 use Orders\Domain\Interfaces\Repositories\ClientRepositoryInterface;
@@ -32,4 +33,12 @@ class ClientRepository implements ClientRepositoryInterface
         return new Client($clientData);
     }
 
+    public function updateClientTotalOrders(Client $client): void
+    {
+        $clientQuery = ClientHyperfModel::query()->where('external_client_id', $client->id);
+
+        $clientQuery->update([
+            'order_quantity' => Db::raw('order_quantity + 1')
+        ]);
+    }
 }

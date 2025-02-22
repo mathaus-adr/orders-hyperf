@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0b630577decab584164a7cbf664bf3ca",
+    "content-hash": "f29cf6210b76e1aa2d453a6ab3c0040d",
     "packages": [
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -235,6 +235,69 @@
                 }
             ],
             "time": "2022-12-30T00:15:36+00:00"
+        },
+        {
+            "name": "fakerphp/faker",
+            "version": "v1.24.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FakerPHP/Faker.git",
+                "reference": "e0ee18eb1e6dc3cda3ce9fd97e5a0689a88a64b5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FakerPHP/Faker/zipball/e0ee18eb1e6dc3cda3ce9fd97e5a0689a88a64b5",
+                "reference": "e0ee18eb1e6dc3cda3ce9fd97e5a0689a88a64b5",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4 || ^8.0",
+                "psr/container": "^1.0 || ^2.0",
+                "symfony/deprecation-contracts": "^2.2 || ^3.0"
+            },
+            "conflict": {
+                "fzaninotto/faker": "*"
+            },
+            "require-dev": {
+                "bamarni/composer-bin-plugin": "^1.4.1",
+                "doctrine/persistence": "^1.3 || ^2.0",
+                "ext-intl": "*",
+                "phpunit/phpunit": "^9.5.26",
+                "symfony/phpunit-bridge": "^5.4.16"
+            },
+            "suggest": {
+                "doctrine/orm": "Required to use Faker\\ORM\\Doctrine",
+                "ext-curl": "Required by Faker\\Provider\\Image to download images.",
+                "ext-dom": "Required by Faker\\Provider\\HtmlLorem for generating random HTML.",
+                "ext-iconv": "Required by Faker\\Provider\\ru_RU\\Text::realText() for generating real Russian text.",
+                "ext-mbstring": "Required for multibyte Unicode string functionality."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Faker\\": "src/Faker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "François Zaninotto"
+                }
+            ],
+            "description": "Faker is a PHP library that generates fake data for you.",
+            "keywords": [
+                "data",
+                "faker",
+                "fixtures"
+            ],
+            "support": {
+                "issues": "https://github.com/FakerPHP/Faker/issues",
+                "source": "https://github.com/FakerPHP/Faker/tree/v1.24.1"
+            },
+            "time": "2024-11-21T13:46:39+00:00"
         },
         {
             "name": "fig/http-message-util",
@@ -2590,6 +2653,74 @@
             "time": "2024-09-25T02:54:12+00:00"
         },
         {
+            "name": "hyperf/paginator",
+            "version": "v3.1.49",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hyperf/paginator.git",
+                "reference": "dd9d59f5601fbdaa69f488348c7debd1931feb7b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hyperf/paginator/zipball/dd9d59f5601fbdaa69f488348c7debd1931feb7b",
+                "reference": "dd9d59f5601fbdaa69f488348c7debd1931feb7b",
+                "shasum": ""
+            },
+            "require": {
+                "hyperf/contract": "~3.1.0",
+                "hyperf/support": "~3.1.0",
+                "hyperf/utils": "~3.1.0",
+                "php": ">=8.1"
+            },
+            "suggest": {
+                "hyperf/event": "Reqiured to use PageResolverListener.",
+                "hyperf/framework": "Reqiured to use PageResolverListener.",
+                "hyperf/http-server": "Reqiured to use PageResolverListener."
+            },
+            "type": "library",
+            "extra": {
+                "hyperf": {
+                    "config": "Hyperf\\Paginator\\ConfigProvider"
+                },
+                "branch-alias": {
+                    "dev-master": "3.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Hyperf\\Paginator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A paginator component for hyperf.",
+            "homepage": "https://hyperf.io",
+            "keywords": [
+                "hyperf",
+                "paginator",
+                "php"
+            ],
+            "support": {
+                "docs": "https://hyperf.wiki",
+                "issues": "https://github.com/hyperf/hyperf/issues",
+                "pull-request": "https://github.com/hyperf/hyperf/pulls",
+                "source": "https://github.com/hyperf/hyperf"
+            },
+            "funding": [
+                {
+                    "url": "https://hyperf.wiki/#/zh-cn/donate",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://opencollective.com/hyperf",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2024-12-17T09:42:13+00:00"
+        },
+        {
             "name": "hyperf/pipeline",
             "version": "v3.1.42",
             "source": {
@@ -2785,6 +2916,76 @@
                 }
             ],
             "time": "2024-12-02T10:54:30+00:00"
+        },
+        {
+            "name": "hyperf/resource",
+            "version": "v3.1.42",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hyperf/resource.git",
+                "reference": "d51ed276f7a1a30a1c00aab0aba9b61d6286ff79"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hyperf/resource/zipball/d51ed276f7a1a30a1c00aab0aba9b61d6286ff79",
+                "reference": "d51ed276f7a1a30a1c00aab0aba9b61d6286ff79",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "hyperf/codec": "~3.1.0",
+                "hyperf/context": "~3.1.0",
+                "hyperf/http-message": "~3.1.0",
+                "hyperf/paginator": "~3.1.0",
+                "hyperf/support": "~3.1.0",
+                "hyperf/tappable": "~3.1.0",
+                "hyperf/utils": "~3.1.0",
+                "php": ">=8.1",
+                "psr/container": "^1.0 || ^2.0",
+                "swow/psr7-plus": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "hyperf": {
+                    "config": "Hyperf\\Resource\\ConfigProvider"
+                },
+                "branch-alias": {
+                    "dev-master": "3.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Hyperf\\Resource\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A api resource component for hyperf.",
+            "homepage": "https://hyperf.io",
+            "keywords": [
+                "hyperf",
+                "php",
+                "resource"
+            ],
+            "support": {
+                "docs": "https://hyperf.wiki",
+                "issues": "https://github.com/hyperf/hyperf/issues",
+                "pull-request": "https://github.com/hyperf/hyperf/pulls",
+                "source": "https://github.com/hyperf/hyperf"
+            },
+            "funding": [
+                {
+                    "url": "https://hyperf.wiki/#/zh-cn/donate",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://opencollective.com/hyperf",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2024-09-25T02:54:12+00:00"
         },
         {
             "name": "hyperf/serializer",
@@ -3321,16 +3522,16 @@
         },
         {
             "name": "jetz1n/orders-microservice",
-            "version": "1.0.6",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mathaus-adr/orders-domain.git",
-                "reference": "25a10a372b980b0ab7c8569acfc212e7be50bd2e"
+                "reference": "072dec1b5ec19a554b792d9dbdeabbd2e9de2765"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mathaus-adr/orders-domain/zipball/25a10a372b980b0ab7c8569acfc212e7be50bd2e",
-                "reference": "25a10a372b980b0ab7c8569acfc212e7be50bd2e",
+                "url": "https://api.github.com/repos/mathaus-adr/orders-domain/zipball/072dec1b5ec19a554b792d9dbdeabbd2e9de2765",
+                "reference": "072dec1b5ec19a554b792d9dbdeabbd2e9de2765",
                 "shasum": ""
             },
             "require": {
@@ -3346,9 +3547,9 @@
             "description": "Business rule for application",
             "support": {
                 "issues": "https://github.com/mathaus-adr/orders-domain/issues",
-                "source": "https://github.com/mathaus-adr/orders-domain/tree/1.0.6"
+                "source": "https://github.com/mathaus-adr/orders-domain/tree/1.1.1"
             },
-            "time": "2025-01-26T19:25:54+00:00"
+            "time": "2025-02-22T15:54:44+00:00"
         },
         {
             "name": "laminas/laminas-mime",
@@ -6436,16 +6637,16 @@
         },
         {
             "name": "hyperf/devtool",
-            "version": "v3.1.42",
+            "version": "v3.1.51",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hyperf/devtool.git",
-                "reference": "ae1c8f547c21eb591a94ae3fbacf054542de82d3"
+                "reference": "b032916fa51293f894046754f596f7d6d71352df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hyperf/devtool/zipball/ae1c8f547c21eb591a94ae3fbacf054542de82d3",
-                "reference": "ae1c8f547c21eb591a94ae3fbacf054542de82d3",
+                "url": "https://api.github.com/repos/hyperf/devtool/zipball/b032916fa51293f894046754f596f7d6d71352df",
+                "reference": "b032916fa51293f894046754f596f7d6d71352df",
                 "shasum": ""
             },
             "require": {
@@ -6500,7 +6701,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2024-09-25T02:54:12+00:00"
+            "time": "2025-02-06T06:42:00+00:00"
         },
         {
             "name": "hyperf/testing",
@@ -9482,12 +9683,12 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": ">=8.1"
     },
-    "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "platform-dev": {},
+    "plugin-api-version": "2.6.0"
 }

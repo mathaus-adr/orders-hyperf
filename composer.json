@@ -13,6 +13,7 @@
     "license": "Apache-2.0",
     "require": {
         "php": ">=8.1",
+        "fakerphp/faker": "^1.24",
         "hyperf/amqp": "^3.1",
         "hyperf/cache": "~3.1.0",
         "hyperf/command": "~3.1.0",
@@ -27,12 +28,13 @@
         "hyperf/logger": "^3.1",
         "hyperf/memory": "~3.1.0",
         "hyperf/process": "~3.1.0",
+        "hyperf/resource": "^3.1",
         "hyperf/watcher": "^3.1",
-        "jetz1n/orders-microservice": "1.0.6"
+        "jetz1n/orders-microservice": "1.1.1"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.0",
-        "hyperf/devtool": "~3.1.0",
+        "hyperf/devtool": "^3.1",
         "hyperf/testing": "~3.1.0",
         "mockery/mockery": "^1.0",
         "phpstan/phpstan": "^1.0",

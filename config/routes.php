@@ -9,6 +9,9 @@ declare(strict_types=1);
  * @contact  group@hyperf.io
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
+
+use App\Controller\ClientOrderListController;
+use App\Controller\OrderListController;
 use Hyperf\HttpServer\Router\Router;
 
 Router::addRoute(['GET', 'POST', 'HEAD'], '/', 'App\Controller\IndexController@index');
@@ -16,3 +19,7 @@ Router::addRoute(['GET', 'POST', 'HEAD'], '/', 'App\Controller\IndexController@i
 Router::get('/favicon.ico', function () {
     return '';
 });
+
+Router::get('/clients/{client_id}/orders', [ClientOrderListController::class, 'index']);
+
+Router::get('/orders', [OrderListController::class, 'index']);

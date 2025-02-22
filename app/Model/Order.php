@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Model;
 
 use Hyperf\DbConnection\Model\Model;
+use Hyperf\Testing\Concerns\InteractsWithModelFactory;
 
 /**
  * @property int $id 
@@ -15,6 +16,8 @@ use Hyperf\DbConnection\Model\Model;
  */
 class Order extends Model
 {
+    use InteractsWithModelFactory;
+
     /**
      * The table associated with the model.
      */
@@ -29,4 +32,14 @@ class Order extends Model
      * The attributes that should be cast to native types.
      */
     protected array $casts = ['id' => 'integer', 'created_at' => 'datetime', 'updated_at' => 'datetime'];
+
+    public function client()
+    {
+        return $this->belongsTo(Client::class);
+    }
+
+    public function orderItems()
+    {
+        return $this->hasMany(OrderItem::class);
+    }
 }
